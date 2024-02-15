@@ -11,6 +11,16 @@ public class CadastroAluno {
 	String login;
 	String numIdentificacao; 
 	
+	public boolean verificaNome(String nome) {
+		if (nome.matches("*.( 0 - 9 ).*")) {
+			this.nome = nome;
+			return false;
+		}
+		
+		else
+			return true; 
+	} 
+	
 	
 	public boolean verificaEmail(String email) {
 		if (email.contains("@"))
@@ -21,24 +31,32 @@ public class CadastroAluno {
 	} 
 	
 	public boolean verificaSenha (String senha) {
-		if (senha.length() >=6)
-			return true;
+		if (senha.length() >=6) {
+			this.senha = senha;
+		return true;
+		}
+		
 		else {
 			return false; 
 		}
 	}
 	
 	public boolean verificaTelefone ( String telefone ) {
-		if ( telefone.length() == 11) 
-			return true;
+		if ( telefone.length() == 11) {
+			this.telefone = telefone;
+		return true;
+		}
+		
 		else {
 			return false; 
 		}
 	}
 	
 	public boolean verificaIdentificacao ( String numIdentificacao ) {
-		if ( numIdentificacao.length() == 5 )
-			return true; 
+		if ( numIdentificacao.length() == 5 ){
+			this.numIdentificacao = numIdentificacao;
+		return true;
+		}
 		else {
 			return false;
 		}

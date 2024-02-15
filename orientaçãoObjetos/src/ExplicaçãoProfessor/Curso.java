@@ -1,4 +1,4 @@
-package escolaTech;
+package ExplicaçãoProfessor;
 
 public class Curso {
 	// atributos:

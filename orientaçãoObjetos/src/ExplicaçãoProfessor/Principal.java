@@ -1,4 +1,4 @@
-package escolaTech;
+package ExplicaçãoProfessor;
 
 import java.util.Scanner;
 
