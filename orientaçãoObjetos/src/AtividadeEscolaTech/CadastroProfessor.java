@@ -7,6 +7,7 @@ public class CadastroProfessor {
 	String senhaProf;
 	String numIdentif; 
 	String telefoneProf; 
+	String loginProf; 
 	
 	
 	public boolean verificaEmail(String emailProf) {
@@ -17,7 +18,7 @@ public class CadastroProfessor {
 		return true; 
 	} 
 	
-	public boolean verificaSenha (String senhaProf) {
+	public boolean verificaSenhaProf (String senhaProf) {
 		if (senhaProf.length() >= 6)
 			return true;
 		else {
@@ -40,6 +41,14 @@ public class CadastroProfessor {
 			return false;
 		}
 	}
+	
+	public boolean verificaLoginProf(String loginProf) {
+		if (loginProf.contains("_"))
+			this.loginProf = loginProf;
+		else
+			return false;
+		return true; 
+	} 
 	
 	public String mostrarDados() {
 		String dados =  "\n O seu login é: " + emailProf + "\nA senha do login é a mesma do e-mail! "; 

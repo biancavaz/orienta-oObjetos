@@ -62,6 +62,14 @@ public class CadastroAluno {
 		}
 	}
 	
+	public boolean verificaLogin(String login) {
+		if (login.contains("_"))
+			this.login = login;
+		else
+			return false;
+		return true; 
+	} 
+	
 	public String mostrarDados() {
 		String dados =  "\n O seu login é: " + email + "\nA senha do login é a mesma do e-mail! "; 
 				

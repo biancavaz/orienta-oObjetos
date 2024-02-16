@@ -17,19 +17,17 @@ public class Disciplina {
 			return true; 
 	} 
 }
-		public boolean verificacodDisciplina (String codDisciplina) {
-			if (codDisciplina.matches(".*( 0 - 9 ).*") && ((codDisciplina.length())==6)) {	
-				this.codDisciplina = codDisciplina;
-			return true;
+			public boolean verificacodDisciplina(String codDisciplina) {
+				if (codDisciplina.matches(".*(a - z ).*") || (codDisciplina.length()<4))  {
+					return false;
+					}
+				else {
+					this.codDisciplina = codDisciplina;
+					return true; 
+			} 
 		}
-			else {
-				return false;
-			}
-			
 		
 		
-		
-	
 	}
-}
+
 

@@ -8,6 +8,7 @@ public class PrincipalCadastro {
 		Scanner sc = new Scanner (System.in);
 		
 		int opcao, quantidade = 0, cont, cont1, cont2, cont4;
+		int opcaoCadastro, opcaoProfs; 
 		int matriz [][] = new int [quantidade][30]; 
 		CadastroAluno [] listaAlunos = new CadastroAluno [1000];
 		
@@ -19,84 +20,127 @@ public class PrincipalCadastro {
 		
 	switch ( opcao ) {
 	
-	// cadastro alunos. 
+			case 1: 
+				System.out.println(" Bem vindo aluno!"
+					+ "\n0- login"
+					+ "\n1- Cadastro");
+				opcaoCadastro = sc.nextInt();
+			
+				switch ( opcaoCadastro ) {
+					
+					case 0: 
+						CadastroAluno aluno2  = new CadastroAluno ();
+							aluno2 = new CadastroAluno();
 		
-		case 1: 
-			System.out.println(" Informe a quantidade de alunos que serão cadastrados: ");
-				quantidade = sc.nextInt();
+						System.out.println(" Informe o seu login: ");
+							while (!aluno2.verificaLogin( sc.next())) { 
+								System.out.println(" informe o login novamente : ");
+							}
+							System.out.println(" Informe sua senha: ");
+								while (!aluno2.verificaSenha( sc.next())) { 
+									System.out.println(" Informe a senha novamente: ");
+								}  break;
 				
-				CadastroAluno [] aluno1  = new CadastroAluno [quantidade];
+					case 1: 
+						CadastroAluno [] aluno1  = new CadastroAluno [quantidade];
+							System.out.println(" Informe a quantidade de alunos que serão cadastrados: ");
+								quantidade = sc.nextInt();
 				
-			for ( cont= 0; cont <quantidade; cont++) {
-				System.out.println("\nInforme os dados do aluno ");
-					aluno1 [cont]= new CadastroAluno();
+					for ( cont= 0; cont <quantidade; cont++) {
+						System.out.println("\nInforme os dados do aluno ");
+							aluno1 [cont]= new CadastroAluno();
 						
-					System.out.println(" Informe o nome: ");
-							aluno1[cont].nome = sc.next();
-			 
-					System.out.println("\n Informe o seu e-mail: ");
-			 			while (!aluno1[cont].verificaEmail( sc.next())) { 
-			 				System.out.println(" informe o email novamente : ");
-			 		} 
-			 		System.out.println(" Informe sua senha: ");
-			 			while (!aluno1[cont].verificaSenha( sc.next())) { 
-			 				System.out.println(" Informe a senha novamente: ");
-			 		}  
-			 		System.out.println(" Informe o seu número de telefone: ");
-			 			while (!aluno1[cont].verificaTelefone( sc.next())) { 
-			 				System.out.println(" informe o telefone novamente: ");
-			 		} 
+							System.out.println(" Informe o nome: ");
+								aluno1[cont].nome = sc.next();
+							
+								System.out.println("\n Informe o seu e-mail: ");
+									while (!aluno1[cont].verificaEmail( sc.next())) { 
+										System.out.println(" informe o email novamente : ");
+									} 
+									System.out.println(" Informe sua senha: ");
+										while (!aluno1[cont].verificaSenha( sc.next())) { 
+											System.out.println(" Informe a senha novamente: ");
+										}  
+										System.out.println(" Informe o seu número de telefone: ");
+											while (!aluno1[cont].verificaTelefone( sc.next())) { 
+												System.out.println(" informe o telefone novamente: ");
+											} 
 			 					
 			 		System.out.println(" Informe o seu numero de identificação: ");
 			 			while ( !aluno1[cont].verificaIdentificacao( sc.next())) {
 			 				System.out.println(" Informe o número de identificação novamente: ");
 			 		}
-			 				
 				} 
+	
 			
 			System.out.print(" ------ LISTA ALUNOS ------  "); 
 			 	for ( cont2 =0; cont2<quantidade; cont2++) {
 					System.out.println( "\nnome:"+ aluno1[cont2].nome 
-					+ "\n e-mail:" + aluno1[cont2].email 
-					+ "\n cadastro:" + aluno1[cont2].numIdentificacao
-					+ "\n ___________________ ");
-			 } break; 
-				
+							+ "\n e-mail:" + aluno1[cont2].email 
+							+ "\n cadastro:" + aluno1[cont2].numIdentificacao
+							+ "\n ___________________ ");
+					}
+			 	} break; 
+			 
+			 		 
+			 
 	// cadastro professores	
 				
 		case 2: 
-			System.out.println(" Informe a quantidade de profs que serão cadastrados: ");
-				quantidade = sc.nextInt();
+			System.out.println(" Olá professor! "
+					+ "\n0- login"
+					+ "\n1- cadastro");
+			opcaoProfs = sc.nextInt(); 
 			
-			CadastroProfessor[] prof1  = new CadastroProfessor [quantidade];
-			
-			for ( cont1= 0; cont1 <quantidade; cont1++) {
-				System.out.println("Informe os dados do professor");
-					prof1 [cont1]= new CadastroProfessor();
+			switch ( opcaoProfs) {
+				
+				case 0: 
+					CadastroProfessor prof2  = new CadastroProfessor ();
+						prof2 = new CadastroProfessor();
+
+				System.out.println(" Informe o seu login: ");
+					while (!prof2.verificaLoginProf( sc.next())) { 
+						System.out.println(" informe o login novamente : ");
+						}
+					System.out.println(" Informe sua senha: ");
+						while (!prof2.verificaSenhaProf( sc.next())) { 
+							System.out.println(" Informe a senha novamente: ");
+						}  break;
 					
-				System.out.println(" Informe o nome:");
-					prof1[cont1].nomeProf = sc.next();
+			
+			
+				case 1: 
+					CadastroProfessor[] prof1  = new CadastroProfessor [quantidade];
+						System.out.println(" Informe a quantidade de profs que serão cadastrados: ");
+							quantidade = sc.nextInt();
+			
+						for ( cont1= 0; cont1 <quantidade; cont1++) {
+							System.out.println("Informe os dados do professor");
+								prof1 [cont1]= new CadastroProfessor();
+					
+								System.out.println(" Informe o nome:");
+									prof1[cont1].nomeProf = sc.next();
 	 
-				System.out.println(" Informe o seu e-mail: ");
-					while (!prof1[cont1].verificaEmail( sc.next())) { 
-						System.out.println(" informe o email novamente: ");
-				} 
-				System.out.println(" Informe sua senha: ");
-					while (!prof1[cont1].verificaSenha(sc.next())) { 
-						System.out.println(" Informe a senha novamente: ");
-				}  
-				System.out.println(" Informe o seu número de telefone: "); 
-					while (!prof1[cont1].verificaTelefone(sc.next())) { 
-	 					System.out.println(" informe o telefone novamente: ");
-	 			} 
-				System.out.println(" Informe o seu numero de identificação: ");
-		 			while ( !prof1[cont1].verificaIdentificacao(sc.next())) {
-		 				System.out.println(" Informe o número de identificação novamente: ");
-		 		}	
-		 			System.out.println(prof1[cont1].mostrarDados());
-		 					break; 				
-				}
-			 					
+									System.out.println(" Informe o seu e-mail: ");
+										while (!prof1[cont1].verificaEmail( sc.next())) { 
+											System.out.println(" informe o email novamente: ");
+										} 
+										System.out.println(" Informe sua senha: ");
+											while (!prof1[cont1].verificaSenhaProf(sc.next())) { 
+												System.out.println(" Informe a senha novamente: ");
+											}  
+											System.out.println(" Informe o seu número de telefone: "); 
+												while (!prof1[cont1].verificaTelefone(sc.next())) { 
+													System.out.println(" informe o telefone novamente: ");
+												} 
+												System.out.println(" Informe o seu numero de identificação: ");
+													while ( !prof1[cont1].verificaIdentificacao(sc.next())) {
+														System.out.println(" Informe o número de identificação novamente: ");
+													}	
+													System.out.println(prof1[cont1].mostrarDados());
+		 					 				
+					}
+				} break;
 			 }
 	
 	// curos e disciplinas cadastradas.

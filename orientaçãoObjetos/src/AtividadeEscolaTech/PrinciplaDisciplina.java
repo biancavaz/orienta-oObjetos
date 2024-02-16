@@ -27,14 +27,18 @@ public class PrinciplaDisciplina {
 	 		} 
 					
 					System.out.println(" Informe a descrição do conteúdo da disciplina : ");
-						disciplina1[cont4].dscrConteúdo = sc.next();
+					while (disciplina1[cont4].verificadscrConteúdo( sc.next()) != true ) { 
+		 				System.out.println(" informe a descrição da disciplina novamente: ");
+		 		} 
 						
 						System.out.println(" Digite a carga horária da disciplina: ");
-							disciplina1[cont4].cargaHoraria = sc.next(); 
-							
+						while (disciplina1[cont4].verificacargaHoraria( sc.next()) != true ) { 
+			 				System.out.println(" informe a carga horário da disciplina novamente: ");
+			 		} 
 							System.out.println(" Mensalidade da disciplina: ");
-								disciplina1[cont4].mensalidade = sc.next(); 
-							
+							while (disciplina1[cont4].verificamensalidade( sc.next()) != true ) { 
+				 				System.out.println(" informe a mensalidade da disciplina novamente: ");
+				 		} 
 							
 		}
 	}
