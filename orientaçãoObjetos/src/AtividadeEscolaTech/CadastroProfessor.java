@@ -50,9 +50,4 @@ public class CadastroProfessor {
 		return true; 
 	} 
 	
-	public String mostrarDados() {
-		String dados =  "\n O seu login é: " + emailProf + "\nA senha do login é a mesma do e-mail! "; 
-				
-		return dados; 
-	}
 }

@@ -8,6 +8,8 @@ public class explicaçãoVetor {
 	
 	//	listaAlunos[0] = aluno1[cont]; 
 		
-	
+	// curso curso1 = new curso()
+	// disciplina disc1 = new disciplina (); 
+	// disc1.curso = curso1; 
 
 }
