@@ -20,7 +20,48 @@ public class ExplicaçãoProf2 {
 		jose.setEndereco(end1);
 		
 		*/
+		
 	
+		
+		/* pessoa pessoa1 = new pessoa ();
+		 set e get
+		 
+		 endereco endereco1 = new endereco ();
+		 
+		 endereco1.setRua("rua das palmeiras");
+		 pessoa1.setEndereco(endereco1); */
+		
+		
+		
+		/* -- add produto na classe principal --
+		 
+		 pedido pedido1 = new pedido();
+		 pedido1.addproduto(produto1);  */
+	
+		
+		/* public void removeProduto(int indice){
+		 this.produtos.remove(indice):
+		 } */
+		
+		
+		/* public produto getProduto (int indice){
+		 return this .produtos.get(indice);
+		 }*/
+		
+		
+		/* -- ler o preço de todos os produtos --
+		 public double getValorTotal(){
+		 
+		 double valorTotal = 0; 
+		 for(int cont =0; cont<produtos.size(); cont++){
+		 valorTotal += getProduto(a).getPreco();
+		 }
+		 return valorTotal;
+		 }
+		 */
+		
+		
+		
 		
 	}
 

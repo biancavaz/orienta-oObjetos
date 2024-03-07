@@ -10,7 +10,6 @@ public class ExplicaçãoPof {
 			return true; // return fim
 		} 
 		return false;
-	
 	}
 	public String getRua () { // get pega
 		return this.rua;

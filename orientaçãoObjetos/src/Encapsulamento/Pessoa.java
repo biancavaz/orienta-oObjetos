@@ -5,6 +5,12 @@ public class Pessoa {
 	private String nome;
 	private String RG;
 	private String CPF; 
+	private Edereco endereco; 
+	
+	
+	public void setEndereco(Edereco endereco) {
+		this.endereco = endereco;
+	}
 	
 	public boolean setNome (String nome ) {
 		if (nome.contains ("0 - 9")) {

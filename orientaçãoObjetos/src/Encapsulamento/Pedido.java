@@ -1,17 +1,30 @@
 package Encapsulamento;
 
 import java.sql.Date;
+import java.util.ArrayList;
 
 public class Pedido {
 	
 	private int numero;
-	private Date data;
+	private String data;
 	private int qntdItens; 
 	
-	public void setData(Date data) {
+	private Pessoa pessoa; // quem fez o pedido
+	private ArrayList<Produtos> produtos = new ArrayList<>(); // produtos q a pessoa comprou ou vai comprar (lista de produtos)
+	
+	public void addProduto (Object produtos1) {
+		this.produtos.add((Produtos) produtos1);
+	}
+	
+	public Produtos getProduto (int indice){
+		 return this .produtos.get(indice);
+	}
+	
+	
+	public void setData(String data) {
 		this.data = data;
 	} 
-	public Date getData() {
+	public String getData() {
 		return data;
 	}
 	
