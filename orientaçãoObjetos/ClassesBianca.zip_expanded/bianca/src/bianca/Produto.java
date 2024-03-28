@@ -1,7 +1,7 @@
-package IndustriaInteligente;
+package bianca;
+
 /***
  * @author bianca_vaz
- * @author carlos_kviatkowsky
  * data de criação: 08.03.24 
  * Descrição: Esta classe contem informações sobre o produto, como:
  * id do produto, nome, descrição, processo de fabricação, data de produção do produto,

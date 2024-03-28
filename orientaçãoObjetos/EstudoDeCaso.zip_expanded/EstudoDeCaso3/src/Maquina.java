@@ -1,4 +1,3 @@
-package IndustriaInteligente;
 /***
  * @author bianca_vaz
  * @author carlos_kviatkowsky

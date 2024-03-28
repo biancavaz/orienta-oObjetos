@@ -1,7 +1,5 @@
-package IndustriaInteligente;
 /***
  * @author bianca_vaz 
- * @author carlos_kviatkowsky
  * data de criação: 08.03.24
  * descrição: Nesta classe contem informações sobre o operador, 
  * tais quais: Id, nome, habilidades que esse operador possui.
@@ -9,10 +7,12 @@ package IndustriaInteligente;
  * O status, a necessidade de manutencao  
  */
 
+
+package bianca;
+
 import java.util.ArrayList;
 
 public class Operador {
-
 	private int idOperador;
 	private String nome;
 	private ArrayList<String> habilidades = new ArrayList<>();
@@ -42,8 +42,9 @@ public class Operador {
 	}
 
 	public void setIdOperador(int idOperador) {
-		if (idOperador > 99)
+		if (idOperador > 0) {
 			this.idOperador = idOperador;
+		}
 	}
 
 	public String getNome() {

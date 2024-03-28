@@ -1,4 +1,3 @@
-package IndustriaInteligente;
 /***
  * @author carlos_kviatkowsky && @author bianca_vaz 
  * Essa classe contém todos os testes das classes, como as suas relações
